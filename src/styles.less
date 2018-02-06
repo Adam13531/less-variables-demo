@@ -1,13 +1,23 @@
-@screen-xs: ~"(min-width: 400px)";
-@screen-sm: ~"(min-width: 768px)";
-@screen-md: ~"(min-width: 992px)";
-@screen-lg: ~"(min-width: 1200px)";
+@xs: 400;
+@sm: 768;
+@md: 992;
+@lg: 1200;
+
+@screen-xs: ~"(min-width: @{xs}px)";
+@screen-sm: ~"(min-width: @{sm}px)";
+@screen-md: ~"(min-width: @{md}px)";
+@screen-lg: ~"(min-width: @{lg}px)";
 
 :export {
   xs: @screen-xs;
   sm: @screen-sm;
   md: @screen-md;
   lg: @screen-lg;
+
+  xsBreakpoint: @xs;
+  smBreakpoint: @sm;
+  mdBreakpoint: @md;
+  lgBreakpoint: @lg;
 }
 
 .screen-xs(@rules) {

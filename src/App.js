@@ -19,22 +19,22 @@ export default class App extends Component {
       <div className={styles.hello}>
         <Media query={styles.xs}>
           {matches =>
-            matches && <div>Matched {styles.xs} <PogChamp /></div>
+            matches && <div>Matched {styles.xs} (breakpoint at {styles.xsBreakpoint}) <PogChamp /></div>
           }
         </Media>
         <Media query={styles.sm}>
           {matches =>
-            matches && <div>Matched {styles.sm} <PogChamp /> <PogChamp /></div>
+            matches && <div>Matched {styles.sm} (breakpoint at {styles.smBreakpoint}) <PogChamp /> <PogChamp /></div>
           }
         </Media>
         <Media query={styles.md}>
           {matches =>
-            matches && <div>Matched {styles.md} <PogChamp /> <PogChamp /> <PogChamp /></div>
+            matches && <div>Matched {styles.md} (breakpoint at {styles.mdBreakpoint}) <PogChamp /> <PogChamp /> <PogChamp /></div>
           }
         </Media>
         <Media query={styles.lg}>
           {matches =>
-            matches && <div>Matched {styles.lg} <PogChamp /> <PogChamp /> <PogChamp /> <PogChamp /></div>
+            matches && <div>Matched {styles.lg} (breakpoint at {styles.lgBreakpoint}) <PogChamp /> <PogChamp /> <PogChamp /> <PogChamp /></div>
           }
         </Media>
       </div>
