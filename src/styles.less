@@ -1,0 +1,45 @@
+@screen-xs: ~"(min-width: 400px)";
+@screen-sm: ~"(min-width: 768px)";
+@screen-md: ~"(min-width: 992px)";
+@screen-lg: ~"(min-width: 1200px)";
+
+:export {
+  xs: @screen-xs;
+  sm: @screen-sm;
+  md: @screen-md;
+  lg: @screen-lg;
+}
+
+.screen-xs(@rules) {
+  @media @screen-xs { @rules(); }
+}
+
+.screen-sm(@rules) {
+  @media @screen-sm { @rules(); }
+}
+
+.screen-md(@rules) {
+  @media @screen-md { @rules(); }
+}
+
+.screen-lg(@rules) {
+  @media @screen-lg { @rules(); }
+}
+
+.hello {
+  background-color: red;
+  color: white;
+  height: 400px;
+
+  .screen-xs({
+    background-color: green;
+  });
+
+  .screen-md({
+    background-color: blue;
+  });
+
+  .screen-lg({
+    background-color: purple;
+  });
+}
